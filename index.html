@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포토카드 다운로드</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'CookieRun';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">포토카드 다운로드</h1>
+            <p class="subtitle">포토카드들을 다운로드해보세요</p>
+        </header>
+
+        <div class="cards-container">
+            <div class="card" data-image="img/Asset 7.png">
+                <div class="card-image">
+                    <img src="img/Asset 12.png" alt="지구방범대의 펭그리 교관">
+                </div>
+                <div class="card-info">
+                    <h3>지구방범대의 펭그리 교관</h3>
+                    <button class="download-btn" onclick="downloadImage('img/Asset 7.png', '포토카드1.png')">
+                        다운로드
+                    </button>
+                </div>
+            </div>
+
+            <div class="card" data-image="img/Asset 8.png">
+                <div class="card-image">
+                    <img src="img/Asset 14.png" alt="포토카드 2">
+                </div>
+                <div class="card-info">
+                    <h3>지구박사연구소의 강지구 박사</h3>
+                    <button class="download-btn" onclick="downloadImage('img/Asset 8.png', '포토카드2.png')">
+                        다운로드
+                    </button>
+                </div>
+            </div>
+
+            <div class="card" data-image="img/Asset 9.png">
+                <div class="card-image">
+                    <img src="img/Asset 16.png" alt="포토카드 3">
+                </div>
+                <div class="card-info">
+                    <h3>에코씨어터의 병철이</h3>
+                    <button class="download-btn" onclick="downloadImage('img/Asset 9.png', '포토카드3.png')">
+                        다운로드
+                    </button>
+                </div>
+            </div>
+
+            <div class="card" data-image="img/Asset 10.png">
+                <div class="card-image">
+                    <img src="img/Asset 15.png" alt="포토카드 4">
+                </div>
+                <div class="card-info">
+                    <h3>에이전트 햄의 햄찍이</h3>
+                    <button class="download-btn" onclick="downloadImage('img/Asset 10.png', '포토카드4.png')">
+                        다운로드
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="imageModal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img id="modalImage" src="" alt="확대된 이미지">
+                <button class="download-btn modal-download" onclick="downloadModalImage()">
+                    다운로드
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="floating-hearts">
+        <div class="heart">✨</div>
+        <div class="heart">💫</div>
+        <div class="heart">⭐</div>
+        <div class="heart">🌟</div>
+        <div class="heart">✨</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
